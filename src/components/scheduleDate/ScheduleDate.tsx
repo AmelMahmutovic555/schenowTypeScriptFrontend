@@ -34,8 +34,6 @@ export default function ScheduleDate() {
   const handleDates = useCallback(async () => {
     try {
       setLoading(true);
-      setMessage(null);
-
       const res = await axios.get<TimeSlot[]>(`${apiUrl}/timeslot/all`);
 
       setAvailableDates(res.data);

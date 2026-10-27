@@ -120,7 +120,7 @@ export default function AvailableDate() {
                 <input
                   type="time"
                   name="from"
-                  min={todayHrs}
+                  // min={todayHrs}
                   value={meeting.from}
                   onChange={(e) => handleChange(e, "from")}
                   required

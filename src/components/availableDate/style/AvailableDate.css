@@ -1,0 +1,121 @@
+.meetingParent {
+  display: flex;
+  justify-content: center;
+  animation-name: fadeUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.articleParentBooking > div {
+  animation-name: fadeUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.formParent {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  max-width: 50%;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.formParent > label,
+.formParent > button {
+  display: block;
+  margin-block: 1rem;
+}
+
+.formParent > label:first-of-type {
+  margin-top: 1rem;
+}
+
+.addDateBtn {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+#error {
+  /* animation-name: slide;
+  animation-duration: 3s;
+  animation-fill-mode: forwards; */
+  margin: auto;
+  /* transform: translate(-50%, -50%); */
+
+  color: rgb(101, 13, 11);
+  display: block;
+  font-weight: 800;
+  /* position: absolute; */
+  /* top: 0; */
+}
+
+.meetingParent2 {
+  width: 100%;
+  max-width: 100%;
+  /* padding: 1rem; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+  /* flex-direction: column; */
+}
+
+.meetingBtnParent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-self: end;
+  margin-top: 2rem;
+}
+
+.headingMeetingParent {
+  align-self: start;
+}
+
+.headingMeetingParent > h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  /* margin: 0; */
+}
+
+.headingMeetingParent > p {
+  /* margin: 0; */
+
+  margin-bottom: 2rem;
+}
+
+.input > input {
+  /* display: block; */
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  width: 200px;
+
+  /* background-color: transparent; */
+}
+
+.articleParentBooking > div > h1,
+.articleParentBooking > div > p {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .input > input {
+    /* display: block; */
+    padding: 0.5rem 0;
+    width: 100px;
+    /* width: fit-content; */
+    /* max-width: fit-content; */
+    /* background-color: transparent; */
+  }
+
+  .formParent {
+    width: 70%;
+    max-width: 70%;
+  }
+}

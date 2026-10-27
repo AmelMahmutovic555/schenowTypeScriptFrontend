@@ -1,0 +1,317 @@
+@keyframes fadeUp {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.articleParentBooking {
+  background-image: url("/public/bgSchedule.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* background: linear-gradient(
+    rgb(162, 162, 191),
+    rgb(174, 174, 205),
+    rgb(187, 187, 221)
+  ); */
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.articleParentBooking > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 2rem;
+}
+
+.articleParentBooking > div:first-of-type > h1 {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
+}
+
+.articleParentBooking > div:first-of-type > p {
+  font-size: 1.1rem;
+}
+
+/* .parentBooking {
+  background: linear-gradient(
+    rgb(162, 162, 191),
+    rgb(174, 174, 205),
+    rgb(187, 187, 221)
+  );
+  min-height: 95vh;
+} */
+
+#availableDates {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#parentAvaDates {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0;
+  padding-top: 1rem;
+  /* margin-top: 1rem; */
+  /* padding-inline: 1rem; */
+  padding-bottom: 5rem;
+}
+
+.cardDates {
+  /* display: block; */
+
+  background-color: #fdfbf9;
+  width: fit-content;
+  max-width: fit-content;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 60%;
+  max-width: 60%;
+
+  animation-name: fadeUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.avaSpotParent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 1rem;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  /* font-size: 1.5rem; */
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.headingAvaSpot {
+  text-align: start;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+.btnBookNow {
+  /* width: 100%; */
+  /* max-width: 100%; */
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(60, 57, 57);
+  color: white;
+  cursor: pointer;
+  height: fit-content;
+  align-self: center;
+}
+
+.btnBookNow:hover {
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+}
+
+.btnBookNowDisabled {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(205, 205, 205);
+  color: white;
+  cursor: pointer;
+  height: fit-content;
+  align-self: center;
+}
+
+.bookedMark {
+  color: green;
+  background-color: rgb(169, 245, 169);
+  font-weight: 700;
+  width: fit-content;
+  max-width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(-50%, -150%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  100% {
+    display: none;
+  }
+}
+#mess {
+  position: fixed;
+
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+
+  z-index: 9999;
+  color: rgb(196, 223, 196);
+  font-weight: 900;
+  background-color: rgb(34, 194, 34);
+  padding: 1rem;
+  border-radius: 15px;
+
+  text-align: center;
+  width: max-content;
+  max-width: 90vw;
+}
+
+#dialog {
+  width: fit-content;
+  max-width: fit-content;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+#dialog > label,
+#dialog > input {
+  display: block;
+  width: 90%;
+  max-width: 90%;
+  margin-block: 0.5rem;
+  font-weight: 700;
+}
+
+#dialog > input {
+  padding: 0.5rem 1rem;
+}
+
+/* #dialog > * {
+  display: block;
+} */
+
+#dialog > button {
+  cursor: pointer;
+}
+
+.dialog-btn-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.headerDialogParent {
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+}
+
+.headerDialogParent > button {
+  height: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  border: none;
+}
+
+.x {
+  cursor: pointer;
+}
+
+.dialogCancel,
+.dialogConfirm {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dialogConfirm {
+  background-color: rgb(69, 69, 216);
+  color: white;
+  font-weight: 700;
+}
+
+.dialogCancel {
+  background-color: rgb(220, 220, 220);
+  font-weight: 700;
+}
+
+.dateTimeParent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-size: 1.1rem;
+  background-color: rgb(247, 255, 255);
+}
+
+#dialog > input {
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.date > span,
+.time > span,
+.dialogDate > span,
+.dialogTime > span {
+  color: #8f8c8c;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.date > div,
+.time > div,
+.dialogDate > div,
+.dialogTime > div {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  #parentAvaDates {
+    padding-inline: 2rem;
+  }
+
+  .avaSpotParent {
+    grid-gap: 0.5rem;
+  }
+
+  #dialog {
+    margin-inline: 1rem;
+  }
+
+  .date {
+    margin-top: 1rem;
+  }
+
+  .cardDates {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cardDates {
+    width: 40%;
+    max-width: 40%;
+  }
+}

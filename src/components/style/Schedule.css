@@ -1,0 +1,92 @@
+@keyframes fadeUp {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.home {
+  background-image: url("/public/bgSchedule.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 95vh;
+}
+
+.scheduleParent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  /* margin-top: 1rem; */
+  flex-wrap: wrap;
+
+  animation-name: fadeUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  /* gap: 1rem; */
+}
+
+.headingSchedule {
+  text-align: center;
+}
+
+.headingSchedule > h1 {
+  font-size: 5rem;
+  margin-top: 25%;
+  margin-bottom: 0;
+  color: rgb(60, 57, 57);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.headingSchedule > p {
+  font-size: 2rem;
+  margin-top: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.scheduleBtnParent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.scheduleBtnParent > div > * > * {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(60, 57, 57);
+  /* border: 1px solid white; */
+  color: white;
+  cursor: pointer;
+}
+
+.scheduleBtnParent > div:last-of-type > * > * {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(198, 190, 190);
+  /* border: 1px solid white; */
+  color: black;
+  cursor: pointer;
+}
+
+.scheduleBtnParent > div > * > *:hover {
+  border: 1px solid rgb(60, 57, 57);
+  background-color: transparent;
+  color: rgb(60, 57, 57);
+  transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 500px) {
+  .headingSchedule > h1 {
+    font-size: 3rem;
+  }
+
+  .headingSchedule > p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,35 @@
+.navbarParent {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+  background-color: rgb(249, 248, 248);
+  padding: 0.5rem 0.5rem;
+}
+
+.navbarParent > * > * {
+  padding: 1rem 1rem;
+  border: none;
+  /* border-radius: 10px;
+  border: 1px solid white; */
+  color: black;
+  font-weight: 900;
+  font-size: 0.9rem;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbarParent > * > *:hover {
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.logout {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+@media (min-width: 1000px) {
+}

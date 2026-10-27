@@ -45,7 +45,7 @@ export default function ScheduleDate() {
     } finally {
       setLoading(false);
     }
-  }, [apiUrl]);
+  }, [apiUrl, setMessage]);
 
   useEffect(() => {
     handleDates();

@@ -74,16 +74,16 @@ export default function AvailableDate() {
     return `${yyyy}-${mm}-${dd}`;
   };
 
-  const getTodayHours = () => {
-    const today = new Date();
-    const hh = String(today.getHours()).padStart(2, "0");
-    const mm = String(today.getMinutes()).padStart(2, "0");
-    return `${hh}:${mm}`;
-  };
+  // const getTodayHours = () => {
+  //   const today = new Date();
+  //   const hh = String(today.getHours()).padStart(2, "0");
+  //   const mm = String(today.getMinutes()).padStart(2, "0");
+  //   return `${hh}:${mm}`;
+  // };
 
   const todayStr = getTodayString();
 
-  const todayHrs = getTodayHours();
+  // const todayHrs = getTodayHours();
   return (
     <article className="articleParentBooking">
       <div>

@@ -1,7 +1,4 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-
 import Habits from "./components/Habits";
 import Navbar from "./components/Navbar";
 import AvailableDate from "./components/availableDate/AvailableDate";

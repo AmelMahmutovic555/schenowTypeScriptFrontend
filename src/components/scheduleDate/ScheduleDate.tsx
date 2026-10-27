@@ -29,20 +29,18 @@ export default function ScheduleDate() {
     email: "",
   });
 
-  const [error, setError] = useState<string | null>(null);
-
   const ref = useRef<HTMLDialogElement | null>(null);
 
   const handleDates = useCallback(async () => {
     try {
       setLoading(true);
-      setError(null);
+      setMessage(null);
 
       const res = await axios.get<TimeSlot[]>(`${apiUrl}/timeslot/all`);
 
       setAvailableDates(res.data);
     } catch (error: unknown) {
-      setError("Failed to load available appointments.");
+      setMessage("Failed to load available appointments.");
       console.error(error);
     } finally {
       setLoading(false);
@@ -66,7 +64,7 @@ export default function ScheduleDate() {
       name: "",
       email: "",
     });
-    setError(null);
+    setMessage(null);
     ref.current?.showModal();
   }
 
@@ -90,7 +88,6 @@ export default function ScheduleDate() {
 
     try {
       setMessage(null);
-      setError(null);
 
       const res = await axios.put<string>(
         `${apiUrl}/timeslot/book/${selectedDate.date}/${selectedDate.from}/${selectedDate.to}`,
@@ -103,13 +100,13 @@ export default function ScheduleDate() {
       await handleDates();
     } catch (error: unknown) {
       if (axios.isAxiosError(error)) {
-        setError(
+        setMessage(
           typeof error.response?.data === "string"
             ? error.response.data
             : "Booking failed. Please try again.",
         );
       } else {
-        setError("An unexpected error occurred.");
+        setMessage("An unexpected error occurred.");
       }
     }
   }
